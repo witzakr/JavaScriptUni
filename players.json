@@ -2,15 +2,13 @@
     {
         "name": "Wit",
         "age": 20,
-        "occupation": "student",
-        "country_of_residence": "Poland",
-        "score": 0
+        "occupation": "Student",
+        "country_of_residence": "Poland"
     },
     {
-        "name": "Vasily",
-        "age": 19,
-        "occupation": "student",
-        "country_of_residence": "USSR",
-        "score": 0
+        "name": "John",
+        "age": 21,
+        "occupation": "Student",
+        "country_of_residence": "USA"
     }
 ]
