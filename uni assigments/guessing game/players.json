@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Wit",
+        "age": 20,
+        "occupation": "Student",
+        "country_of_residence": "Poland"
+    },
+    {
+        "name": "Jan",
+        "age": 25,
+        "occupation": "Robol",
+        "country_of_residence": "USSR"
+    }
+]
