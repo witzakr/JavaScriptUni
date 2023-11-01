@@ -42,7 +42,7 @@ try {
     });
     console.log("Data has been saved to players.json");
 } catch (error) {
-    console.error("Error reading or displaying player data:", error);
+    console.error("Error404 :(", error);
 }
 
 const player1 = players[0];
