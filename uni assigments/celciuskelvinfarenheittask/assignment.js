@@ -71,8 +71,23 @@ function convertLitersToGrams2 (boiling_water_liters) {
 }
 Second_Container = convertLitersToGrams2(boiling_water_liters);
 
-console.log(`The first container weighs ${convertLitersToGrams1(water_liters)} grams, is ${water_liters} liter and has a temperature of ${water_temp} C`);
-console.log(`The second container weighs ${convertLitersToGrams2(boiling_water_liters)} grams, is ${boiling_water_liters} and has a temperature of ${boiling_water_temp} C`);
+if (option === 1) {
+    console.log(`The first container weighs ${convertLitersToGrams1(water_liters)} grams, is ${water_liters} liter and has a temperature of ${converted_temp} F`);
+    console.log(`The second container weighs ${convertLitersToGrams2(boiling_water_liters)} grams, is ${boiling_water_liters} and has a temperature of ${boiling_water_temp} F`);
+
+} else if (option === 2) {
+    console.log(`The first container weighs ${convertLitersToGrams1(water_liters)} grams, is ${water_liters} liter and has a temperature of ${converted_temp} C`);
+    console.log(`The second container weighs ${convertLitersToGrams2(boiling_water_liters)} grams, is ${boiling_water_liters} and has a temperature of ${boiling_water_temp} C`);
+
+}else if (option === 3) {
+    console.log(`The first container weighs ${convertLitersToGrams1(water_liters)} grams, is ${water_liters} liter and has a temperature of ${converted_temp} F`);
+    console.log(`The second container weighs ${convertLitersToGrams2(boiling_water_liters)} grams, is ${boiling_water_liters} and has a temperature of ${boiling_water_temp} F`);
+
+}else if (option === 4) {
+    console.log(`The first container weighs ${convertLitersToGrams1(water_liters)} grams, is ${water_liters} liter and has a temperature of ${converted_temp} K`);
+    console.log(`The second container weighs ${convertLitersToGrams2(boiling_water_liters)} grams, is ${boiling_water_liters} and has a temperature of ${boiling_water_temp} K`);
+
+}
 
 function temperatureOfMixedContainer(First_Container, water_temp, Second_Container, boiling_water_temp) {
     total = (First_Container * water_temp + Second_Container * boiling_water_temp) / (First_Container + Second_Container);
