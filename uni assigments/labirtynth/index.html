@@ -8,7 +8,7 @@
 	<body>
 		<script type="module">
 			import {step,jump,look,turn,done,showSolution,setupAsStage} from "./main.js";
-			import(`./${location.search.substr(1)||'main'}.js`).then(()=>{;
+			import(`./${location.search.substr(1)||'stage-a'}.js`).then(()=>{;
 				console.log('ready?');
 				console.log('type help() to see the list of valid functions')
 				Object.assign(window,{
