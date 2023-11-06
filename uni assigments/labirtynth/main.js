@@ -1,5 +1,5 @@
 console.clear();
-let grid=[],path=[],stageName="stage 0",stageSetup=false;
+let grid=[],path=[],stageName="stage A",stageSetup=false;
 
 const isValidPoint=(x,y)=>{
 	if(y<0)return;
@@ -95,7 +95,7 @@ var gx=0,gy=0,gdir=0;
 path.push([gx,gy,gdir]);
 
 
-function turn(dir){
+export function turn(dir){
 	switch(dir){
 		case "b":case "back" :dir= gdir=(gdir+2)%4;break;
 		case "l":case "left" :dir= gdir=(gdir+3)%4;break;
@@ -114,7 +114,7 @@ function turn(dir){
 	};	
 };
 
-function look(dir,retType="string"){
+export function look(dir,retType="string"){
 	let dx=0,dy=0;
 	switch(dir){
 		case "f":case "front":dir= 0;break;
@@ -154,7 +154,7 @@ function look(dir,retType="string"){
 	
 }
 
-function move(jump=false){
+export function move(jump=false){
 	let dx=0,dy=0;
 	switch(gdir){
 		case 0:dx= 1;break;
@@ -198,26 +198,26 @@ function move(jump=false){
 	};
 }
 
-function step(){
+export function step(){
 	move();
 }
-function jump(){
+export function jump(){
 	move(true);
 }
 
-function done(){
+export function done(){
 	return finalPoint && (gx==finalPoint[0])&&(gy==finalPoint[1]);
 }
 
 let stageSolution;
 let stageInit;
 let finalPoint;
-function showSolution(){
+export function showSolution(){
 	stageInit();
 	stageSolution();
 }
 
-function setupAsStage(name,stageFn){
+export function setupAsStage(name,stageFn){
 	stageSetup=true;finalPoint=undefined;
 	gx=0,gy=0,gdir=0;
 	grid=[];path=[[gx,gy,gdir]];	
@@ -251,46 +251,3 @@ function setupAsStage(name,stageFn){
 	stageInit();
 	//console.log(grid,path,{gx,gy,gdir});
 }
-
-
-
-setupAsStage("Stage A", () => {
-
-    for (let i = 0; i < 10; i++) {
-      step();
-    }
-  
-    turn('right');
-    for (let j = 0; j < 8; j++) {
-        step();
-    }
-
-    turn('back')
-    for (let k = 0; k < 4; k++) {
-        step();
-    }
-
-    turn('left')
-    for (let l = 0; l < 10; l++) {
-        step();
-    }
-
-    turn('left')
-    for (let m = 0; m < 4; m++) {
-        step();
-    }
-
-    turn('back')
-    for (let n = 0; n < 7; n++) {
-        step();
-    }
-  });
-  
-  
-  
-  
-  
-  
-  
-
-
